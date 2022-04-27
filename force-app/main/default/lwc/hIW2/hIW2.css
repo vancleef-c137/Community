@@ -22,7 +22,7 @@ html {
 
 
 
-ul,
+
 nav {
 	list-style: none;
 }
@@ -185,6 +185,7 @@ header nav li {
 	background-size: cover;
   }
 
+
 .hero .background-image {
 
 	top: 0;
@@ -263,6 +264,8 @@ header nav li {
 
   .counter .content .count-item {
     height: 340px;
+	padding-left: 100px;
+	padding-right: 100px;
     position: relative;
     float: left;
     width: 100%;
@@ -279,7 +282,7 @@ header nav li {
     height: 32px;
     top: 160px;
     left: 70%;
-    background: url('/ressources/resourceUrl/Circles') center center no-repeat;
+    background: url('/sfsites/c/resource/1650895324000/Circles') center center no-repeat;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -297,7 +300,7 @@ header nav li {
     height: 32px;
     top: 140px;
     left: 70%;
-    background: url('/ressources/resourceUrl/Circles') center center no-repeat;
+    background: url('/sfsites/c/resource/1650895324000/Circles') center center no-repeat;
     -webkit-transition: all 0.3s ease 0s;
     -moz-transition: all 0.3s ease 0s;
     -o-transition: all 0.3s ease 0s;
@@ -326,7 +329,7 @@ header nav li {
   .counter .content .count-item span {
     display: block;
     text-align: center;
-    color: #fff;
+    color: rgba(38, 31, 31, 0.536);
     font-weight: 500;
     font-size: 17px;
     letter-spacing: 0.25px;
