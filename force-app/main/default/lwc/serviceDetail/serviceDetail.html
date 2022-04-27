@@ -1,0 +1,15 @@
+<template>
+<div>
+    <template if:true={_service.data}>
+        <div for:each={_service.data} for:item="service" key={_service.Id}>
+        <lightning-card>
+        <div><h1>{service.Name}</h1></div>
+        <p>{service.provider__c}</p>
+        </lightning-card>
+    </div>
+    </template>
+    <template if:false={_service.data}>
+        <div class="slds-text-heading_medium">Cliquez un nom de service</div>
+        </template>
+</div>
+</template>

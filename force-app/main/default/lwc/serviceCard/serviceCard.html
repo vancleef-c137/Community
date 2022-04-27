@@ -1,0 +1,57 @@
+<template>
+    <div>
+        <div for:each={Producto} for:item="product" key={product.Id}>
+            <h1> LENNA ENA HOWA HIHA </h1>
+            <h2>   {product.Name}  </h2>
+            <img src={product.Picture_URL__c} />
+            <p> {product.Description}</p>
+                     <h2>Duration {product.duration__c} Days</h2>
+        </div>
+        <div class="d-flex">
+            <img class="rounded-circle me-3"
+                 style="width:3rem;height:3rem;"
+                 src="https://via.placeholder.com/128/fe669e/ffcbde.png?text=S" />
+            <div class="flex-grow-1">
+               <div class="hstack gap-2 mb-1">
+                  <a href="#" class="name">{name}</a>
+               </div>
+               <div class="form-floating mb-3">
+                  <textarea class="form-control w-100"
+                            placeholder="Leave a comment here"
+                            id="my-comment"
+                            style="height:7rem;"></textarea>
+                  <label for="my-comment">Leave a comment here</label>
+               </div>
+               <div class="hstack justify-content-end gap-2">
+                  <button class="btn btn-sm btn-link link-secondary text-uppercase">cancel</button>
+                  <button class="btn btn-sm btn-primary text-uppercase">comment</button>
+               </div>
+            </div>
+         </div>
+      </div>
+        <div>
+
+
+            <h1>
+                COMMENTSS 
+            </h1>
+
+
+        </div>
+        <div for:each={Review.data} for:item="rev" key ={rev.id}>
+            <div>
+                <div class="Review-content"> {rev.review__c}</div>
+
+                <div>     
+                    <h2>
+                        AUTHOR :  {rev.commercialExternalInfo__c} ---- likes : {rev.likes__c} likes  {rev.dislikes__c}
+                     </h2>
+
+                </div>
+                   
+            </div>  
+            
+        </div>
+    </div>
+
+</template>

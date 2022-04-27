@@ -1,0 +1,72 @@
+.tm-offer h6 {
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+.tm-section {
+    position: relative;
+    z-index: 1;
+}
+.tm-padding-section-bottom {
+    padding-bottom: 100px;
+}
+.bg-white {
+    background-color: #fff!important;
+}
+.hero-image {
+    background-image: url("https://talan.com/fileadmin/Reprise_de_contenus/Actualites/Press_Release/petit_consulting.jpg");
+
+  }
+h6 {
+    display: block;
+    font-size: 0.67em;
+    margin-block-start: 2.33em;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+.tm-offer h1 {
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.tm-scrollanim.scrollanim-action {
+    -webkit-animation: fadeIn 1s ease-in-out 0s 1 forwards;
+    animation: fadeIn 1s ease-in-out 0s 1 forwards;
+}
+.tm-offer {
+    padding-left: 120px;
+}
+.tm-offer {
+    padding: 50px 0;
+    padding-left: 170px;
+    background-position: center right;
+    position: relative;
+    z-index: 1;
+}
+h1{
+    margin: 0;
+    margin-bottom: 15px;
+}
+.tm-countdown {
+    margin-top: -10px;
+}
+div {
+    display: block;
+}
+body {
+    overflow: hidden!important;
+    font-size: 15px;
+    line-height: 26px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Hind,sans-serif;
+    color: #777;
+    font-weight: 400;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}

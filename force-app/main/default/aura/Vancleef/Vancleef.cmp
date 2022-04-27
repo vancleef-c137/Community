@@ -1,0 +1,20 @@
+<aura:component implements="forceCommunity:themeLayout">
+    <aura:attribute name="navBar" type="Aura.Component[]"/>
+    <aura:attribute name="profileMenu" type="Aura.Component[]"/>
+
+
+    <div>
+        <div>
+
+            <div>
+                {!v.navBar}
+            </div>
+            <div>
+                {!v.profileMenu}
+            </div>
+            <div>
+                {!v.body}
+            </div>
+        </div>
+    </div>
+</aura:component>

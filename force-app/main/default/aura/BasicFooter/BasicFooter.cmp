@@ -1,0 +1,9 @@
+<aura:component description="footer" implements="forceCommunity:availableForAllPageTypes" access="global">
+	<aura:attribute name="footer" type="String" default="Test footer ena footer mte3 el site" access="global" />
+	<aura:attribute name="footerYear" type="String" default="2022" access="global" />
+    <aura:attribute name="FooterColor" type="String" default="background-color:#a7c1c7" access="global"/>
+	<div class="grid" style="{!v.FooterColor}">
+		<span>{!v.footer}</span> <br /> 
+		<span>&copy; Copyright {!v.footerYear}</span>
+	</div>
+</aura:component>

@@ -1,0 +1,30 @@
+.fonttyle {
+    
+    font-weight:normal ;
+    color: rgb(48, 48, 48);
+    border-style: ridge;
+    padding: 1%;
+    margin-left: 5%;
+    margin-right: 40%;
+}
+.userStyle{
+    font-weight: bold;
+    color: rgb(86, 197, 234);
+    margin-left: 5%;
+}
+.cardStyle{
+    background-color: aliceblue;
+    margin: 5%;
+
+}
+.divStyle{
+    border-style: solid;
+  margin: 4%;
+  padding-top: 4%;
+  color:    rgb(86, 197, 234);
+
+}
+.Date{
+    padding-left: 40%;
+    color: darkgrey;
+}

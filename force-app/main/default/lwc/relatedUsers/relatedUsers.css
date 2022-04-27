@@ -1,0 +1,29 @@
+.list-group-item {
+    position: relative;
+    display: block;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: rgba(178, 193, 214, 0.473);
+    border: 1px solid rgba(0, 0, 0, 0.125);
+  }
+.Related-Users{
+    position: right;
+    font-style: italic;
+}
+img {
+ 
+}
+.Related-Users-Names{
+  /* margin: auto; */
+  margin-top:auto;
+margin-right:50%;
+margin-bottom:auto;
+margin-left:10%;
+}
+.header, .footer{
+  height: 50px;
+  background: rgba(178, 193, 214, 0.473);
+  color: rgb(0, 0, 0);
+  font-size: large;
+  padding: 8px;
+}

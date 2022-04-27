@@ -1,0 +1,10 @@
+.header, .footer{
+    height: 50px;
+    background: rgba(178, 193, 214, 0.473);
+    color: rgb(51, 85, 160);
+    font-size: x-large;
+    padding: 10px;
+  }
+  .wrapper{
+    background: rgba(178, 193, 214, 0.473);
+  }

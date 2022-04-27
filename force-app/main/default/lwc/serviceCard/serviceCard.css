@@ -1,0 +1,28 @@
+body {
+    font-size: 0.875rem;
+    background-color: #eef0f2;
+  }
+  .comment-img {
+    width: 3rem;
+    height: 3rem;
+  }
+  .name{
+      color:aquamarine
+  }
+  h1{
+      color:aqua
+  }
+
+  .Review-content{
+padding-top: 27px;
+padding-bottom: 10px;
+background: rgba(178, 193, 214, 0.473);
+  }
+  h2{
+      color: rgb(97, 185, 219);
+  }
+  .comment-replies .comment-img {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  

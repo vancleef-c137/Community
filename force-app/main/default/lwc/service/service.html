@@ -1,0 +1,22 @@
+<template>
+
+  <div class="" if:true={SubscriptionServices.data}>
+    <div class="flex-container1" for:each={SubscriptionServices.data} for:item="rpb" key={rpb.Id}>
+
+      <div>
+        <h3 data-id={rpb.Id} key={rpb.id} onclick={handleNameSelect}> {rpb.Name} {rpb.Id}
+        </h3><img class="imagestyle" src={rpb.Picture_URL__c} data-id={rpb.Id} key={rpb.id}
+          onclick={handleServiceSelect} />
+      </div>
+      <div>
+        <div class="">Description: {rpb.Description}</div>
+        <a id="toggleButton" onclick={toggleText} href="javascript:void(0);">See More</a>
+
+        <div data-id={rpb.Id} key={rpb.id} onclick={handleProviderSelect}>Provider: {rpb.provider__c}</div>
+      </div>
+
+    </div>
+  </div>
+
+
+</template>

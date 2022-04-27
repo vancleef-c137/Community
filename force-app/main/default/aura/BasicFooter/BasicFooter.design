@@ -1,0 +1,5 @@
+<design:component label="Test Footer">
+	<design:attribute name="footer" label="Footer Message" description="Text elouuuuuuta" />
+	<design:attribute name="footerYear" label="Footerr Year" description="Year you want to appear in the footer" />
+    <design:attribute name="FooterColor" label="Background Color" description="The color you want for you header" />
+</design:component>

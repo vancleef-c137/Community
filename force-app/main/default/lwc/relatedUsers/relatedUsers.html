@@ -1,0 +1,15 @@
+<template > 
+    <h1 class="header"> Colleagues that also use this community</h1>
+  
+        <template for:each={_user.data} for:item="wuser">
+            <div class="list-group-item" key={wuser.Id}>
+              <div style="display: flex;">
+                <div><img src={wuser.SmallPhotoUrl} height= "75" width="75" data-id={wuser.Id} key={wuser.Id} onmouseleave={hidePopoverr} onmouseenter={showPopoverr}></div>
+                <div class="Related-Users-Names"><h1 class="Related-Users">{wuser.Name}</h1></div>
+            </div>
+ 
+        </div>
+        </template>
+        <c-contact-Pop-Over topmargin={top} leftmarginn={left} myranger={ranger}></c-contact-Pop-Over>
+ 
+</template>

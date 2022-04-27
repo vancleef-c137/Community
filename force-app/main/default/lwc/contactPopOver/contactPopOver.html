@@ -1,0 +1,20 @@
+<template >
+    <div>
+        <template if:true={ranger} >
+            <lightning-card>
+            <lightning-record-view-form
+                    record-id={ranger}
+                    object-api-name="User">
+                <div class="" >
+                    <lightning-output-field field-name="Name">
+                    </lightning-output-field>
+                    <lightning-output-field field-name="Email">
+                    </lightning-output-field>
+                    </div>
+            </lightning-record-view-form>
+        </lightning-card>
+        </template>
+    </div>
+
+    
+</template>

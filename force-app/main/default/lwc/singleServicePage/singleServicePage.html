@@ -1,0 +1,73 @@
+<template>
+    <section id="portfolio-details" class="portfolio-details">
+        <div class="container" for:each={Producto} for:item="serv" key={serv.Id}>
+  
+          <div class="row gy-4">
+  
+            <div class="col-lg-8">
+              <div class="portfolio-details-slider swiper">
+                <div class="swiper-wrapper align-items-center">
+  
+                  <div class="swiper-slide">
+                    <img src={serv.Picture_URL__c} alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src={serv.Picture_URL__c} alt="">
+                  </div>
+  
+                  <div class="swiper-slide">
+                    <img src={serv.Picture_URL__c} alt="">
+                  </div>
+  
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+            </div>
+  
+            <div class="col-lg-4">
+              <div class="portfolio-info">
+                <h3>Project information</h3>
+                <ul>
+                  <li><strong>Category</strong>: {serv.Family}</li>
+                  <li><strong>Client</strong>: TALAN</li>
+                  <li><strong>Project date</strong>: 01 March, 2020</li>
+                  <li><strong>Project URL</strong>: <a href="#">tn.talan.com</a></li>
+                </ul>
+              </div>
+              <div class="portfolio-description">
+                <h2>This is an example of portfolio detail</h2>
+                <p>
+                    {serv.Description}
+                </p>
+              </div>
+            </div>
+  <hr>
+  <hr>
+  <hr>
+          </div>
+          <div for:each={Review.data} for:item="rev" key ={rev.id}>
+              
+            <div class="cards">
+                
+                <div class="comment-body" >
+                    <img  class="imgUser" src={imgUrl}>
+                <div class="comment-detail" >
+                  <div  class="comment-header">
+                    <div class="comment-info"><span class="author">{rev.commercialExternalInfo__c}</span>
+                     <span class="comment-date"> <i class="far fa-clock"></i>Jan 20</span></div>
+                   <div calss="comment-action"><span class="follower">likes : {rev.likes__c} likes  {rev.dislikes__c}</span> <span><i class="fas fa-ellipsis-v"></i></span></div>
+                  </div>
+                  <p class="commentContent">{rev.review__c}</p>
+                </div>
+                 </div>
+                
+             </div>
+              <!---->
+           
+            
+        </div>
+  
+        </div>
+      </section>
+</template>

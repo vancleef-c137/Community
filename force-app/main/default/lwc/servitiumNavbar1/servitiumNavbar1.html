@@ -1,0 +1,34 @@
+<template>
+    <div class="containerHeader">
+            <img src={logoSite} class="img">
+        <div class="header-bar">
+            <ul class="slider-menu">
+                <template if:false={boolEmployee}>
+                    <li onclick={gohome} style="padding-left: 109px; padding-right: 109px;">Home</li>
+                    <li onclick={goaboutus}>About us</li>
+                    <li onclick={gosignin} style="padding-right: 109px; padding-left: 109px; margin-left: 0px;">Sign in</li>
+                </template>
+                <!--<template if:false={boolCommercial}>
+                    <li onclick={gohome}>Home</li>
+                    <li onclick={goaboutus}>About us</li>
+                    <li onclick={gosignin}>Sign in</li>
+                </template>-->
+                <template if:true={boolEmployee}>
+                    <li onclick={gohome} style="padding-left: 35px; padding-right: 35px; margin-left: 12px;">Home</li>
+                    <li onclick={goservices} style="padding-right: 35px;padding-left: 35px;">Services</li>
+                    <li onclick={goprofile} style="padding-right: 35px;padding-left: 35px;">Profile</li>
+                    <li onclick={goaboutus} style="padding-right: 35px;padding-left: 35px;">About us</li>
+                    <li onclick={gologout} style="padding-right: 35px;padding-left: 35px;">Log out</li>
+                </template>
+                <template if:true={boolCommercial}>
+                    <li onclick={gohome} style="padding-left: 25px;padding-right: 25px;">Home</li>
+                    <li onclick={goservices} style="padding-left: 25px;padding-right: 25px;">Services</li>
+                    <li onclick={goprofile} style="padding-left: 25px;padding-right: 25px;">Profile</li>
+                    <li onclick={goemployees} style="padding-left: 25px;padding-right: 25px;">Employees</li>
+                    <li onclick={goaboutus} style="padding-left: 25px;padding-right: 25px;">About us</li>
+                    <li onclick={gologout} style="padding-left: 25px;padding-right: 25px;">Log out</li>
+                </template>
+            </ul>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,23 @@
+<template>
+    <template for:each={wiredCategories.data} for:item="category" >
+       
+       
+       
+        <div key={category.Id}  >
+          
+            <div class="gallery" >
+                <div class="container">
+                    <img src={category.image__c} data-id={category.Id} key={category.Id}
+
+                    onclick={handleCategorySelect}>
+                 
+            
+              </div>
+              <p class="txt">{category.Name}</p>
+            </div>
+           
+         
+            </div>
+
+    </template>
+</template>

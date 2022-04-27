@@ -1,0 +1,45 @@
+<template>
+    <lightning-card class="cardStyle">
+      <div class="divStyle">
+        <template for:each={wiredComments.data} for:item="com" key={rpb.id}>
+  
+          <div key={com.id}>
+            <div class="userStyle"> {com.user2__c} </div>
+            <div class="fonttyle"> {com.Name} </div>
+            <div class="Date"> {com.CreatedDate} </div>
+            <br />
+  
+          </div>
+  
+        </template>
+        <lightning-card>
+          <div slot="title">
+            <h3> 
+                <lightning-icon icon-name="standard:comment" size="small"></lightning-icon>            
+             </h3>
+          </div>    
+      
+         <p class="slds-p-horizontal_small">
+           <lightning-input type="text" label="" placeholder="Enter Comment" value={getCommentRecord.Name} onchange={nameInpChange}></lightning-input>
+          </p>
+      
+    
+      
+           
+         <div slot="footer">
+           <lightning-button label="Post" onclick={saveCommentAction} variant="brand"></lightning-button>
+         </div>
+      
+        <br/> <br/>
+
+      
+       </lightning-card>
+        <!--
+    <template for:each={wiredUserName.data} for:item="user">
+  
+  <div key={user.id} class="fonttyle" >
+    <div> userName {user.Name} </div>
+  </div> -->
+      </div>
+    </lightning-card>
+  </template>
