@@ -26,12 +26,12 @@ export default class SingleServicePage extends LightningElement {
     }
 
 
-    @track serviceId = "01t8d000000GNKkAAO";
+    @track serviceId = "";
 
     @wire(CurrentPageReference)
     pageReference({ state }) {
         if (state && state.blogId) {
-          //  this.serviceId = state.blogId;
+            this.serviceId = state.blogId;
             console.log(state.blogId);
             console.log("HEHI HEHI ID LAHNE HEEEEHI");
         }

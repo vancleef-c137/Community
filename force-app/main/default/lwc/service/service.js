@@ -88,29 +88,29 @@ publish(this.messageContext,RECORD_SELECTED_CHANNEL ,message);
 }
 
 
-renderedCallback() {
-  loadScript(this, shorten).then(() => {
+// renderedCallback() {
+//   loadScript(this, shorten).then(() => {
 
 
-const text = this.template.querySelector(".more");
-console.log("text");
-console.log(text);
+// const text = this.template.querySelector(".more");
+// console.log("text");
+// console.log(text);
 
 
-  }).catch(error => {
-    console.log("mamchetchi");
-    console.log(error);
-    this.dispatchEvent(
-        new ShowToastEvent({
-            title: 'Error loading Jquery',
-            message: error,
-            variant: 'error'
-        })
-    );
-});
+//   }).catch(error => {
+//     console.log("mamchetchi");
+//     console.log(error);
+//     this.dispatchEvent(
+//         new ShowToastEvent({
+//             title: 'Error loading Jquery',
+//             message: error,
+//             variant: 'error'
+//         })
+//     );
+// });
     
   
-}
+// }
 toggleText(){
   
 }
