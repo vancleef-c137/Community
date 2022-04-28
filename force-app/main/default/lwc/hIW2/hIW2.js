@@ -1,7 +1,7 @@
 import { LightningElement } from 'lwc';
 import { loadStyle, loadScript } from 'lightning/platformResourceLoader';
 import bootstrapcss from '@salesforce/resourceUrl/bootstrapcss';
-import dwer from '@salesforce/resourceUrl/Circles';
+import HeroHero from '@salesforce/resourceUrl/ServitiumHero';
 import res from '@salesforce/resourceUrl/Responsive';
 import fastset from '@salesforce/resourceUrl/FastSetup';
 import userIcon from '@salesforce/resourceUrl/UserExperience';
@@ -15,7 +15,7 @@ import par4 from '@salesforce/resourceUrl/Partner4';
 
 export default class HIW2 extends LightningElement {
 
-    
+    imgUrl=HeroHero;
     imgUrl1=fastset;
     imgUrl2=userIcon;
     imgUrl3=res;

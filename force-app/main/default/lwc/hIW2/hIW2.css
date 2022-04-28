@@ -42,9 +42,10 @@ a.btn {
 	text-transform: uppercase;
 	font-weight: bold;
 	text-align: center;
-	background-color: #e9e294;
+	background-color: rgba(38, 31, 31, 0.536);
 	opacity: 1;
 	transition: all 400ms;
+	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 a.btn:hover {
@@ -194,8 +195,8 @@ header nav li {
 	height: 100%;
 	background-size: cover;
 	z-index: -1;
-	background-color:	#fdf9f3;
-	background-image: url('/sfsites/c/resource/1650885835000/homeimg');
+	background-color:	#fdf9f300;
+	background-image: url('/sfsites/c/resource/1651071298000/ServitiumHero');
 }
 
 .hero h1 {
@@ -218,7 +219,9 @@ header nav li {
 	margin: 26px;
 	width: 275px;
 }
-
+.servitiumimg{
+	object-position: center top;
+}
 .hero a.btn {
 	padding: 20px 46px;
 }
