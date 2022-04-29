@@ -1,0 +1,43 @@
+<aura:component implements="forceCommunity:themeLayout">
+<!--header-->
+<aura:attribute name="header" type="Aura.Component[]"/>
+
+<!--body-->
+    <aura:attribute name="container1" type="Aura.Component[]" />
+    <aura:attribute name="container2" type="Aura.Component[]" />
+    <aura:attribute name="container3" type="Aura.Component[]" />
+
+
+<!--footer-->
+<aura:attribute name="footer" type="Aura.Component[]"/>
+
+<!--Layout-->
+<div class="generalTheme">
+
+<!--row1-->
+<lightning:layout>
+
+<lightning:layoutItem size="12" class="bgbg">
+
+<c:servitiumNavbar1></c:servitiumNavbar1>
+</lightning:layoutItem>
+
+
+</lightning:layout>
+
+<!--row2{!$Resource.ServitiumHero}-->
+    
+ <div class="bgbg" style="width:100%">
+     
+             {!v.body}
+    </div>
+<!--row3-->
+<lightning:layout>
+<lightning:layoutItem size="12" class="slds-m-slds-m-vertical_none footer bgbg">
+
+<!--{!v.footer}-->
+<c:footer2></c:footer2>
+</lightning:layoutItem>
+</lightning:layout>
+</div>
+</aura:component>

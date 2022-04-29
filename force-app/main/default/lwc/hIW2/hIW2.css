@@ -60,7 +60,7 @@ section {
 }
 
 section:not(.hero):nth-child(even) {
-    background-color: rgb(253 249 243 / 63%);
+    background-color: rgba(60, 73, 75, 0.121);
     ;
 }
 
@@ -196,7 +196,6 @@ header nav li {
 	background-size: cover;
 	z-index: -1;
 	background-color:	#fdf9f300;
-	background-image: url('/sfsites/c/resource/1651071298000/ServitiumHero');
 }
 
 .hero h1 {
@@ -417,7 +416,7 @@ header nav li {
 }
 
 .packages .grid li i {
-	color: #e9e294;
+	color: #60b3b77c;
 }
 
 .packages .grid li h4 {

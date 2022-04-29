@@ -4,7 +4,7 @@
     <img src={imgUrl} class="servitiumimg">
     <div class="hero-content-area">
       <h3>if you want it we provide it</h3>
-      <a href="#" class="btn">Get Started</a>
+      <a class="btn" onclick={GetStarted}>Get Started</a>
     </div>
   </section>
 
@@ -30,7 +30,7 @@
       <li>
         <img src={imgUrl1} class="iconicon">
         <h4>Fast Setup</h4>
-        <p>Easy Steps, All you have to do is navigate through our available services and pick what suits your business best, after payment confirmation your site will be ready in 15 minutes</p>
+        <p>Easy Steps, All you have to do is navigate through our available services and pick what suits your business best, after payment confirmation your site will be ready in 10 minutes</p>
       </li>
       <li>
         <img src={imgUrl2} class="iconicon">
@@ -121,6 +121,49 @@
       <input type="email" placeholder="Email">
       <a href="#" class="btn">Submit</a>
     </form>
+  </section>
+  <section>
+    <lightning-card  variant="Narrow"  title="Quick Case" icon-name="standard:case">
+      <div class ="slds-m-around_small">
+          <lightning-input name="subject" 
+                           value={subject} 
+                           type="text" 
+                           label="Case Subject" 
+                           onchange={handleChange}
+          ></lightning-input>
+          <lightning-textarea name="description" 
+                              value={description} 
+                              label="Case Description" 
+                              onchange={handleChange}
+          ></lightning-textarea>
+          <lightning-combobox name="CaseStatus"
+                              label="Case Status"
+                              value={statusValue}
+                              placeholder="Select Status"
+                              options={pickValStatus}
+                              onchange={handleChange}
+          ></lightning-combobox>
+          <lightning-combobox name="CaseOrigin"
+                      label="Case Origin"
+                      value={originValue}
+                      placeholder="Select Origin"
+                      options={pickValOrigin}
+                      onchange={handleChange}
+          ></lightning-combobox>
+          <lightning-combobox name="CasePriority"
+                      label="Case Priority"
+                      value={priorityValue}
+                      placeholder="Select Priority"
+                      options={pickValPriority}
+                      onchange={handleChange}
+          ></lightning-combobox>
+          <br/>
+          <lightning-button variant="brand" 
+                            label="Create Case" 
+                            onclick={handleCreate}
+          ></lightning-button>
+      </div>
+  </lightning-card>
   </section>
 
 

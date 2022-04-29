@@ -78,6 +78,8 @@ export default class ServitiumNavbar1 extends NavigationMixin(LightningElement) 
     }) userProfile;
 
     connectedCallback(){
+        console.log(this.userProfile);
+        console.log("employee");
         this.isEmployee();
         this.isCommercial();
     }

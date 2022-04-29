@@ -3,30 +3,39 @@ import getServices from "@salesforce/apex/SerivceDataController.getServices";
 import getRelatedServices from "@salesforce/apex/SerivceDataController.getRelatedServices";
 import getRelatedPriceBook from "@salesforce/apex/SerivceDataController.getRelatedPriceBook";
 import GetServiceBySubscription from "@salesforce/apex/SerivceDataController.GetServiceBySubscription";
+import getContactId from "@salesforce/apex/SerivceDataController.getContactId";
 import { NavigationMixin } from 'lightning/navigation';
 import shorten from '@salesforce/resourceUrl/shorten';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { loadScript } from 'lightning/platformResourceLoader';
+import Id from '@salesforce/user/Id';
+import profile from '@salesforce/user/profileId';
 import {publish, MessageContext} from 'lightning/messageService';
 import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected__c';
 
 
 
 export default class Service extends NavigationMixin(LightningElement) {
+  ididid="";
+  userId = Id;
+  userprofile = profile;
 
-@wire(getServices) Services;
+  @wire(getContactId, {userId : '$userId'})loggedinid({error,data}) {
+    if (data) {
+        this.ididid = data;
+        console.log("1");
+        console.log(profile);
+        console.log(data);
+    } else if (error) {
+        this.error = error;
+        console.log("erreur1")
+        console.log(JSON.stringify(error));
+    }
 
-@wire(getRelatedServices) RelatedServices({ error, data }) {
-  console.log(data);
-  console.log("lennarelated");
-  this.results = data;
-  this.error = error;
 }
-@wire(getRelatedPriceBook) RelatedPriceBooks;  
 
 
-
-@wire(GetServiceBySubscription) SubscriptionServices;
+  @wire(GetServiceBySubscription, {ContactId : '$ididid'}) SubscriptionServices;
 
 
 @wire(MessageContext)
@@ -110,7 +119,7 @@ publish(this.messageContext,RECORD_SELECTED_CHANNEL ,message);
 // });
     
   
-// }
+//}
 toggleText(){
   
 }

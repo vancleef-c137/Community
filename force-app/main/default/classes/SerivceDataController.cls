@@ -22,10 +22,11 @@ public with sharing class SerivceDataController {
         }
 
         @AuraEnabled(cacheable=true)
-        public static List<Product2> GetServiceBySubscription()
+        public static List<Product2> GetServiceBySubscription(id ContactId)
         {
-             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = '0038d0000084sgoAAA'];
+             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = '0038d000006KcwYAAS'];
             // Set<String> ProdIdSet = new Set<String>();
+            
             List<Product2> Products = new List<Product2>();
             for(Integer i = 0; i < ProductIds.size(); i++){
                 ID ProdIds =  ProductIds.get(i).Product2Id__c;
@@ -45,6 +46,19 @@ public with sharing class SerivceDataController {
         public static List<PRODUCT2> getCategoryServices( id CategoryId){
             return [SELECT NAME, duration__c,  provider__c, PICTURE_URL__C, Description FROM PRODUCT2 WHERE Category__c = :CategoryId];
         }
+
+        @AuraEnabled(cacheable=true)
+        public static String getContactId (String userId)
+
+    {
+
+        List<User> users = [Select ContactId from User where Id =: userId];
+
+        Id contactid = users.get(0).ContactId;
+
+        return contactid;
+
+    }
 
 
 

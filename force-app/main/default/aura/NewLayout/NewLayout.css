@@ -1,0 +1,53 @@
+.THIS .bgbg {
+	background-image: url('/sfsites/c/resource/1650885835000/homeimg');
+	background-size:contain;
+	background-repeat: repeat;
+	background-attachment: fixed;
+	   min-height: 100%;
+	  min-width: 1024px;
+		
+	  /* Set up proportionate scaling */
+	  width: 100%;
+	  height: auto;
+	  }
+
+
+.THIS .slds-m-vertical_small{
+background-size: cover;
+z-index: 99;
+cursor: pointer;
+position: relative;
+/*max-width: 100%;*/
+max-height: 52px;
+display: block;
+outline: 0;
+height: 50px;
+margin-top: 0px;
+margin-buttom: 0px;
+background-color: #16384c
+}
+.THIS .slds-grid slds-wrap{
+background-size: contain;
+z-index: 99;
+cursor: pointer;
+position: relative;
+max-width: 100%;
+max-height: 52px;
+display: block;
+outline: 0;
+height: 50px;
+}
+.THIS .body{
+width: 100%;
+background-color: #fdf9f3;
+/*margin-top: 3cm;*/
+/*margin-left: 1cm;*/
+}
+.THIS .footer{
+width: 100%;
+/*background-color: #16384c;*/
+
+}
+.THIS .generalTheme{
+backgroun-color: #fdf9f3;
+}

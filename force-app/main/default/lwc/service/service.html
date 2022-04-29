@@ -1,6 +1,6 @@
 <template>
-
-  <div class="" if:true={SubscriptionServices.data}>
+<!-- 
+  <div style="padding: 25px" class="" if:true={SubscriptionServices.data}>
     <div class="flex-container1" for:each={SubscriptionServices.data} for:item="rpb" key={rpb.Id}>
 
       <div>
@@ -9,14 +9,23 @@
           onclick={handleServiceSelect} />
       </div>
       <div>
-        <div class="">Description: {rpb.Description}</div>
+        <div class="ServiceDescription">Description: {rpb.Description}</div>
         <a id="toggleButton" onclick={toggleText} href="javascript:void(0);">See More</a>
 
         <div data-id={rpb.Id} key={rpb.id} onclick={handleProviderSelect}>Provider: {rpb.provider__c}</div>
       </div>
 
     </div>
+  </div> -->
+  <div class="albums">
+  <div class="album" for:each={SubscriptionServices.data} for:item="rpb" key={rpb.Id}>
+    <img class="album__artwork" src={rpb.Picture_URL__c} data-id={rpb.Id} key={rpb.id}
+    onclick={handleServiceSelect}>
+    <div class="album__details">
+      <h2>{rpb.Name}</h2>
+      <p class="album__artist">Provider: {rpb.provider__c}</p>
+      <p class="album__desc"> {rpb.Description}</p>
   </div>
-
-
+  </div>
+  </div>
 </template>
