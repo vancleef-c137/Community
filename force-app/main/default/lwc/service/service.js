@@ -3,13 +3,13 @@ import getServices from "@salesforce/apex/SerivceDataController.getServices";
 import getRelatedServices from "@salesforce/apex/SerivceDataController.getRelatedServices";
 import getRelatedPriceBook from "@salesforce/apex/SerivceDataController.getRelatedPriceBook";
 import GetServiceBySubscription from "@salesforce/apex/SerivceDataController.GetServiceBySubscription";
+import GetSubscriptionDetails from "@salesforce/apex/SerivceDataController.getSubscriptionDetails";
 import getContactId from "@salesforce/apex/SerivceDataController.getContactId";
 import { NavigationMixin } from 'lightning/navigation';
 import shorten from '@salesforce/resourceUrl/shorten';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 import { loadScript } from 'lightning/platformResourceLoader';
 import Id from '@salesforce/user/Id';
-import profile from '@salesforce/user/profileId';
 import {publish, MessageContext} from 'lightning/messageService';
 import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected__c';
 
@@ -18,13 +18,11 @@ import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected_
 export default class Service extends NavigationMixin(LightningElement) {
   ididid="";
   userId = Id;
-  userprofile = profile;
 
   @wire(getContactId, {userId : '$userId'})loggedinid({error,data}) {
     if (data) {
         this.ididid = data;
         console.log("1");
-        console.log(profile);
         console.log(data);
     } else if (error) {
         this.error = error;
@@ -37,6 +35,7 @@ export default class Service extends NavigationMixin(LightningElement) {
 
   @wire(GetServiceBySubscription, {ContactId : '$ididid'}) SubscriptionServices;
 
+  @wire(GetSubscriptionDetails, {ContactId : '$ididid'} ) AllSubscriptions;
 
 @wire(MessageContext)
 messageContext;
@@ -125,10 +124,3 @@ toggleText(){
 }
 
 }
-
-
-
- 
-
-
-  

@@ -1,4 +1,6 @@
-<template>
+<template >
+    <div>
+        <template if:true={SubDetails}>
     <div for:each={SubDetails} for:item="Sub" key={Sub.id}> 
         <div class="details card">
             <h1>Start Date {Sub.startdate__c}</h1>
@@ -12,4 +14,11 @@
 
 
     </div>
+        </template>
+
+<template if:false={SubDetails}>
+    <div class="slds-text-heading_medium">Cliquez un nom de service</div>
+    </template>
+</div>
 </template>
+
