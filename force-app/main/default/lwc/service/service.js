@@ -8,7 +8,8 @@ import getContactId from "@salesforce/apex/SerivceDataController.getContactId";
 import { NavigationMixin } from 'lightning/navigation';
 import shorten from '@salesforce/resourceUrl/shorten';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import { loadScript } from 'lightning/platformResourceLoader';
+import { loadStyle, loadScript } from 'lightning/platformResourceLoader';
+import AddToCalendar from '@salesforce/resourceUrl/AddToCalendar'
 import Id from '@salesforce/user/Id';
 import {publish, MessageContext} from 'lightning/messageService';
 import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected__c';
@@ -18,6 +19,54 @@ import RECORD_SELECTED_CHANNEL from '@salesforce/messageChannel/Record_Selected_
 export default class Service extends NavigationMixin(LightningElement) {
   ididid="";
   userId = Id;
+
+
+
+  renderedCallback() {
+    Promise.all([
+      loadScript(this, AddToCalendar + '/add-to-calendar-button-main/assets/js/atcb.min.js'),
+      loadStyle(this, AddToCalendar + '/add-to-calendar-button-main/assets/css/atcb.min.css'),
+      // loadStyle(this, FullCalendarJS + '/fullcalendar.print.min.css')
+    ])
+    .then(() => {
+      console.log("c bon jawek behi")
+      
+      // Initialise the calendar configuration
+   
+    })
+    .catch(error => {
+      // eslint-disable-next-line no-console
+      console.error({
+        message: 'Not Loading FullCalendarJS',
+        error
+      });
+    })
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 
   @wire(getContactId, {userId : '$userId'})loggedinid({error,data}) {
     if (data) {
