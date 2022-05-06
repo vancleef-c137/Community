@@ -108,63 +108,39 @@
         </div>
     </div>
 </section>
-  <section class="contact">
-    <h3 class="title">Having Trouble ? </h3>
-    <p>If you're finding any difficulties whatsoever with this site, please fill out this form and post it so our team could identify and help you with your problem.</p>
-    <hr>
-    <form>
-      <input style="padding: 35px; margin: 35px"  type="text" placeholder="Your Problem here">
-    </form>
-    
-    <form>
+  
+  <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8" method="POST">
+    <section class="contact">
+      <h3 class="title">Having Trouble ? </h3>
+      <p>If you're finding any difficulties whatsoever with this site, please fill out this form and post it so our team could identify and help you with your problem.</p>
+      <hr>
+      <form>
+        <input style="padding: 35px; margin: 35px"  type="text" placeholder="Your Problem here">
+      </form>
       
-      <input type="email" placeholder="Email">
-      <a href="#" class="btn">Submit</a>
+      <form>
+        
+        <input type="email" placeholder="Email">
+        <a href="#" class="btn">Submit</a>
+      </form>
+    </section>
+    <input type=hidden name="orgid" value="00D8d000002cj3P">
+    <input type=hidden name="retURL" value="https://curious-unicorn-wolf-developer-edition.um8.force.com/TheFrontCommunity/s/">
+    
+    
+    <label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
+    
+    <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
+    
+    <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+    
+    <label for="description">Description</label><textarea name="description"></textarea><br>
+    
+    <input type="hidden"  id="external" name="external" value="1" /><br>
+    
+    <input type="submit" name="submit">
+    
     </form>
-  </section>
-  <section>
-    <lightning-card  variant="Narrow"  title="Quick Case" icon-name="standard:case">
-      <div class ="slds-m-around_small">
-          <lightning-input name="subject" 
-                           value={subject} 
-                           type="text" 
-                           label="Case Subject" 
-                           onchange={handleChange}
-          ></lightning-input>
-          <lightning-textarea name="description" 
-                              value={description} 
-                              label="Case Description" 
-                              onchange={handleChange}
-          ></lightning-textarea>
-          <lightning-combobox name="CaseStatus"
-                              label="Case Status"
-                              value={statusValue}
-                              placeholder="Select Status"
-                              options={pickValStatus}
-                              onchange={handleChange}
-          ></lightning-combobox>
-          <lightning-combobox name="CaseOrigin"
-                      label="Case Origin"
-                      value={originValue}
-                      placeholder="Select Origin"
-                      options={pickValOrigin}
-                      onchange={handleChange}
-          ></lightning-combobox>
-          <lightning-combobox name="CasePriority"
-                      label="Case Priority"
-                      value={priorityValue}
-                      placeholder="Select Priority"
-                      options={pickValPriority}
-                      onchange={handleChange}
-          ></lightning-combobox>
-          <br/>
-          <lightning-button variant="brand" 
-                            label="Create Case" 
-                            onclick={handleCreate}
-          ></lightning-button>
-      </div>
-  </lightning-card>
-  </section>
 
 
 </template>

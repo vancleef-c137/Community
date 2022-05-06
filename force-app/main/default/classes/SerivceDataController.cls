@@ -21,6 +21,17 @@ public with sharing class SerivceDataController {
             return [SELECT NAME, duration__c,  provider__c, PICTURE_URL__C, Description, family FROM PRODUCT2 WHERE Id = :ProductId];
         }
 
+  
+  
+        @AuraEnabled
+        public static string getOppo()
+            {
+                list<ServiceSubscription__c> oppoList = new list<ServiceSubscription__c>();
+                oppoList = [SELECT id, Product2Id__c, EndDate__c, name from ServiceSubscription__c where Contact__c = '0038d000006KcwYAAS'];
+                return JSON.serialize(oppoList); 
+            }
+        
+
         @AuraEnabled(cacheable=true)
         public static List<Product2> GetServiceBySubscription(id ContactId)
         {
@@ -38,12 +49,12 @@ public with sharing class SerivceDataController {
         }
 
         @AuraEnabled(cacheable=true)
-        public static List<ServiceSubscription__c> getSubscriptionDetails(){
-            return [SELECT Product2Id__c, EndDate__c, productName__c, StartDate__c from ServiceSubscription__c where Contact__c = '0038d000006KcwYAAS' AND product2Id__c = '01t8d000000GJ1FAAW'];
+        public static List<ServiceSubscription__c> getSubscriptionDetails(id ContactId){
+            return [SELECT Product2Id__c, EndDate__c, productName__c, StartDate__c from ServiceSubscription__c where Contact__c = :ContactId];
         }
 
         @AuraEnabled(cacheable=true)
-        public static List<PRODUCT2> getCategoryServices( id CategoryId){
+        public static List<PRODUCT2> getCategoryServices(id CategoryId){
             return [SELECT NAME, duration__c,  provider__c, PICTURE_URL__C, Description FROM PRODUCT2 WHERE Category__c = :CategoryId];
         }
 

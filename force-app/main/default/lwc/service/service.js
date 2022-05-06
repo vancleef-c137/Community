@@ -45,29 +45,6 @@ export default class Service extends NavigationMixin(LightningElement) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
   @wire(getContactId, {userId : '$userId'})loggedinid({error,data}) {
     if (data) {
         this.ididid = data;
