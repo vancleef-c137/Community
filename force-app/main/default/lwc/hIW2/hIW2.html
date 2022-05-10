@@ -1,9 +1,8 @@
 <template>
-
-  <section class="hero">
+  <hr style="width:80%;text-align:center;margin-left: 150px;">
+  <section class="hero" style="padding-top: 0px;">
     <img src={imgUrl} class="servitiumimg">
     <div class="hero-content-area">
-      <h3>if you want it we provide it</h3>
       <a class="btn" onclick={GetStarted}>Get Started</a>
     </div>
   </section>
@@ -58,7 +57,7 @@
     <p class="quote">to be honest at first i was like "Yeah but why would i need such a website ? " But now after using it with my colleagues i understand how having all our services in a single place with clear manipulations could benefit us</p>
     <p class="author">- Tasnime Dridi - HR responsible</p>
     <p class="quote">I'm very pleased with how fast and easy it was to buy the service and then setup our community site, i couldn't believe it at first but it all happened in 15 minutes and i have all my employees logged in and checking what new services we enrolled in</p>
-    <p class="author">- Sana Ghouil - Business Owner</p>
+    <p class="author">- Sana Ghouli - Business Owner</p>
   </section>
 
   <section class="contact">
@@ -114,17 +113,7 @@
       <h3 class="title">Having Trouble ? </h3>
       <p>If you're finding any difficulties whatsoever with this site, please fill out this form and post it so our team could identify and help you with your problem.</p>
       <hr>
-      <form>
-        <input style="padding: 35px; margin: 35px"  type="text" placeholder="Your Problem here">
-      </form>
-      
-      <form>
-        
-        <input type="email" placeholder="Email">
-        <a href="#" class="btn">Submit</a>
-      </form>
-    </section>
-    <input type=hidden name="orgid" value="00D8d000002cj3P">
+      <input type=hidden name="orgid" value="00D8d000002cj3P">
     <input type=hidden name="retURL" value="https://curious-unicorn-wolf-developer-edition.um8.force.com/TheFrontCommunity/s/">
     
     
@@ -132,13 +121,15 @@
     
     <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
     
-    <label for="subject">Subject</label><input  id="subject" maxlength="80" name="subject" size="20" type="text" /><br>
+    <label for="subject">Subject</label><input  id="subject" maxlength="800" name="subject" size="60" type="text" /><br>
     
-    <label for="description">Description</label><textarea name="description"></textarea><br>
+    <label for="description">Description</label><textarea size="450" name="description"></textarea><br>
     
     <input type="hidden"  id="external" name="external" value="1" /><br>
     
     <input type="submit" name="submit">
+    </section>
+    
     
     </form>
 

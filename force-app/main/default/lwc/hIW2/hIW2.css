@@ -60,8 +60,8 @@ section {
 }
 
 section:not(.hero):nth-child(even) {
-    background-color: rgba(60, 73, 75, 0.121);
-    ;
+    background: rgb(156,182,213);
+background: linear-gradient(180deg, rgba(156, 182, 213, 0.271) 0%, rgba(229, 69, 54, 0.107) 100%);
 }
 
 .grid {
@@ -220,6 +220,7 @@ header nav li {
 }
 .servitiumimg{
 	object-position: center top;
+	padding:0%;
 }
 .hero a.btn {
 	padding: 20px 46px;
@@ -416,7 +417,9 @@ header nav li {
 }
 
 .packages .grid li i {
-	color: #60b3b77c;
+	color: #f3aea685
+
+	;
 }
 
 .packages .grid li h4 {

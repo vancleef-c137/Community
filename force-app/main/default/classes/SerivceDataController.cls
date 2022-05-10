@@ -35,7 +35,7 @@ public with sharing class SerivceDataController {
         @AuraEnabled(cacheable=true)
         public static List<Product2> GetServiceBySubscription(id ContactId)
         {
-             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = :ContactId];
+             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = '0038d00000835VOAAY'];
             // Set<String> ProdIdSet = new Set<String>();
             
             List<Product2> Products = new List<Product2>();
