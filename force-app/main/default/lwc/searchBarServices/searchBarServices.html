@@ -1,0 +1,44 @@
+<template>
+    <div>
+        <lightning-input type="text" label="Enter Product Name" value={accName} onchange={handleChange}>
+        </lightning-input>
+        <p>Displaying Product Information</p>
+
+        <template if:true={productRecord}>
+            <div class="container">   
+            <template for:each={productRecord} for:item="item" for:index="index"  >
+                       
+<lightning-card key={item.Id}  class="slds-card" style="height:12345px; width:12345px" >
+              
+                    <img src={item.Picture_Url__c} class="image"></img>
+              
+                    <br>
+                    <div  key={item.id}>
+                    <div class="overlay">
+                  
+                    <div class="text">
+                    Name: {item.Name}
+                    <br>
+                    Category: {item.Family}
+                </div>
+            </div>
+  </div>
+            </lightning-card>
+        
+       
+
+            </template>
+        </div>
+        </template>
+
+        <template if:true={error}>
+
+            Some error occured.
+
+        </template>
+
+    </div>
+
+
+
+</template>

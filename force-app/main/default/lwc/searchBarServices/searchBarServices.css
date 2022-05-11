@@ -1,0 +1,51 @@
+.grid {  display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr; 
+    -ms-grid-row-align: 1fr 1fr 1fr;
+  }
+  .img {
+    border-radius: 8px;
+    max-width: 50%;
+    max-height: 50%;
+  }
+  .container {
+    position: relative;
+    width: 50%;
+  }
+  
+  .image {
+    display: inline-block;
+    width: 30%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 3;
+    background-color: #8ca2a952;
+   
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .container:hover .overlay {
+    width: 60%;
+    left: 0;
+  }
+  
+  .text {
+    white-space: nowrap; 
+    color: rgb(0, 10, 61);
+    font-size: 10px;
+    font-weight: bold;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }

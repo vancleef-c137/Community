@@ -1,0 +1,21 @@
+<template>
+    <div class="slds-grid navbar-content">
+        <div class="slds-col slds-size_3-of-12 slds-grid--align-center">
+            <img src={logo}>
+        </div>
+        <div class="slds-col slds-size_9-of-12 rightSec">
+            <template for:each={navbarItems} for:item="navbarItem" >
+                <div  key={navbarItem}>
+                <a>
+                    {navbarItem}
+                </a>
+                </div>
+                
+            </template>
+            <div class="slds-col slds-size_3-of-12">
+                <lightning-button variant="brand" label="Log out" title="Brand action"></lightning-button>
+            </div>
+    </div>
+
+    </div>
+</template>
