@@ -4,16 +4,41 @@
             <img src={logo}>
         </div>
         <div class="slds-col slds-size_9-of-12 rightSec">
-            <template for:each={navbarItems} for:item="navbarItem" >
+            <!-- <template for:each={navbarItems} for:item="navbarItem" >
                 <div  key={navbarItem}>
                 <a>
                     {navbarItem}
                 </a>
                 </div>
                 
-            </template>
+            </template> -->
+            <div  class="navBar-items">
+                <a onclick={GoToHome}>
+                    Home   
+                </a>
+                </div >
+                <div  class="navBar-items">
+                    <a onclick={GoToMyServices}>
+                       My Services
+                    </a>
+                    </div>
+                    <div   class="navBar-items">
+                        <a onclick={GoToProfile}>
+                            Profile
+                        </a>
+                        </div>
+                        <div  class="navBar-items" >
+                            <a onclick={GoToAboutUs}>
+                                About Us
+                            </a>
+                            </div>
+                            <div  class="navBar-Logout" >
+                                <a onclick={GoToMyServices}>
+                                    Logout
+                                </a>
+                                </div>
             <div class="slds-col slds-size_3-of-12">
-                <lightning-button variant="brand" label="Log out" title="Brand action"></lightning-button>
+                <!-- <lightning-button variant="brand" label="Log out" title="Brand action"></lightning-button> -->
             </div>
     </div>
 

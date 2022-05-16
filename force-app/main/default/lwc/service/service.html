@@ -40,8 +40,8 @@
     <div class="album" for:each={AllSubscriptions.data} for:item="rpb" key={rpb.Id}>
       <div class="calendar-wrapper">
         <div class="calendar-today">
-            <div class="month-label"> MAY </div>
-            <div class="day-label"> 12 </div>
+            <div class="month-label"> {rpb.StartDate__c.month} </div>
+            <div class="day-label"> {rpb.StartDate__c.day} </div>
             <div class="weekday-label">MONDAY </div>
             <div class="current-time"></div>
         </div>
