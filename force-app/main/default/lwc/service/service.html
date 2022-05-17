@@ -40,9 +40,8 @@
     <div class="album" for:each={AllSubscriptions.data} for:item="rpb" key={rpb.Id}>
       <div class="calendar-wrapper">
         <div class="calendar-today">
-            <div class="month-label"> {rpb.StartDate__c.month} </div>
-            <div class="day-label"> {rpb.StartDate__c.day} </div>
-            <div class="weekday-label">MONDAY </div>
+            <div class="month-label"> {rpb.SDateMonth__c} </div>
+            <div class="day-label"> {rpb.SDateDay__c} </div>
             <div class="current-time"></div>
         </div>
     </div>
@@ -64,8 +63,6 @@
         </div>
         
         <p class="album__desc">Subscription with TALAN tm from {rpb.StartDate__c} ends {rpb.EndDate__c} </p>
-
-        <a href="https://google.com" class="button">Go to Google</a>
     </div>
     </div>
     </div> 

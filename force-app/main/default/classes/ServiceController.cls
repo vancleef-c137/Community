@@ -22,7 +22,7 @@ public with sharing class ServiceController {
         List<Product2> products = new List<Product2>();
         for(Integer i = 0; i < productsIds.size(); i++){
 
-            Id ProdIds =  productsIds.get(i).Product2Id__c;
+           Id ProdIds =  productsIds.get(i).Product2Id__c;
 
             List<Product2> Product = [SELECT Id, Family, Name, Description,Picture_Url__c , IsActive FROM PRODUCT2 WHERE Id = :ProdIds];
 
@@ -275,7 +275,6 @@ List<Product2> accList=[SELECT Id, Name,Family,Description ,picture_URL__c
                 accountObj.Site = csvRowData[1];
                 accountObj.Type = csvRowData[2];
                 accountObj.Website = csvRowData[3];
-             //   accountObj.accountExternalId__c = csvRowData[4];
                 
                 accountInsertList.add(accountObj);
             }

@@ -33,11 +33,11 @@ public with sharing class SerivceDataController {
         
 
         @AuraEnabled(cacheable=true)
-        public static List<Product2> GetServiceBySubscription(id ContactId)
+        public static List<Product2> GetServiceBySubscription()
         {
-             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = '0038d00000835VOAAY'];
+             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = '0038d000006KcwYAAS'];
             // Set<String> ProdIdSet = new Set<String>();
-            
+            //id ContactId
             List<Product2> Products = new List<Product2>();
             for(Integer i = 0; i < ProductIds.size(); i++){
                 ID ProdIds =  ProductIds.get(i).Product2Id__c;
@@ -49,8 +49,9 @@ public with sharing class SerivceDataController {
         }
 
         @AuraEnabled(cacheable=true)
-        public static List<ServiceSubscription__c> getSubscriptionDetails(id ContactId){
-            return [SELECT Product2Id__c, EndDate__c, productName__c, StartDate__c from ServiceSubscription__c where Contact__c = :ContactId];
+        public static List<ServiceSubscription__c> getSubscriptionDetails(){
+            //id ContactId
+            return [SELECT Product2Id__c, EndDate__c, productName__c, StartDate__c, SDateMonth__c, SDateDay__c from ServiceSubscription__c where Contact__c = '0038d000006KcwYAAS'];
         }
 
         @AuraEnabled(cacheable=true)
@@ -120,6 +121,38 @@ public with sharing class SerivceDataController {
 
 
         }
+
+
+        @AuraEnabled(cacheable=true)
+        public static Date getCurrentDate(){
+            return Date.today();
+            
+        }
+    
+        /*@AuraEnabled(cacheable=true)
+        public static String getContactId (String userId)
+        {
+            List<User> users = [Select ContactId from User where Id =: userId];
+            Id contactid = users.get(0).ContactId;
+            return contactid;
+        }*/
+    
+        @AuraEnabled(cacheable=true)
+        public static Date getStartDate (String productId, String contactId)
+        {
+            List<ServiceSubscription__c> sub = [Select StartDate__c from ServiceSubscription__c where Product2Id__c =: productId and Contact__c =: contactId];
+            Date startDate = sub.get(0).StartDate__c;
+            return startDate;
+        }
+    
+        @AuraEnabled(cacheable=true)
+        public static Date getEndDate (String productId, String contactId)
+        {
+            List<ServiceSubscription__c> sub = [Select EndDate__c from ServiceSubscription__c where Product2Id__c =: productId and Contact__c =: contactId];
+            Date endDate = sub.get(0).EndDate__c;
+            return endDate;
+        }
+    
 
 
 
