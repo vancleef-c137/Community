@@ -12,16 +12,22 @@
                     <img src={serv.Picture_URL__c} alt="">
                   </div>
   
-                  <div class="swiper-slide">
-                    <img src={serv.Picture_URL__c} alt="">
-                  </div>
-  
-                  <div class="swiper-slide">
-                    <img src={serv.Picture_URL__c} alt="">
-                  </div>
+                 
   
                 </div>
-                <div class="swiper-pagination"></div>
+                <div class="swiper-pagination">
+
+                  <div class="other-pictures">
+                    <img src={imgUrl1} alt="">
+                  </div>
+  
+                  <div class="other-pictures">
+                    <img src={imgUrl2} alt="">
+                  </div>
+                  <div class="other-pictures">
+                    <img src={imgUrl3} alt="">
+                  </div>
+                </div>
               </div>
             </div>
   
@@ -34,6 +40,34 @@
                   <li><strong>Project date</strong>: 01 March, 2020</li>
                   <li><strong>Project URL</strong>: <a href="#">tn.talan.com</a></li>
                 </ul>
+
+                <template if:true={boolActive}>
+                  <div class="slds-form-element">
+                    <label class="slds-checkbox_toggle slds-grid">
+                      <!--<span class="slds-form-element__label slds-m-bottom_none">Subscription End Date: {product.EndDate__c}</span>-->
+                      <input type="checkbox" name="checkbox-toggle-18" value="checkbox-toggle-18" aria-describedby="checkbox-toggle-18" checked="" disabled="" />
+                      <span class="slds-checkbox_faux_container" aria-live="assertive">
+                        <span class="slds-checkbox_faux" style="background-color: green; width: 56px;height: 24px; "></span>
+                        <span class="slds-checkbox_on" style="padding-left: 8px;padding-top: 8px;width: 68px; color:green">Enabled</span>
+                      </span>
+                    </label>
+                  </div>
+                </template>
+              
+                <template if:true={boolInactive}>
+                  <div class="slds-form-element">
+                    <label class="slds-checkbox_toggle slds-grid">
+                      <!--<span class="slds-form-element__label slds-m-bottom_none">Subscription Start Date: {product.StartDate__c}</span>-->
+                      <input type="checkbox" name="checkbox-toggle-20" value="checkbox-toggle-20" disabled="" aria-describedby="checkbox-toggle-20"/>
+                      <span class="slds-checkbox_faux_container" aria-live="assertive">
+                        <span class="slds-checkbox_faux" style="background-color: rgb(187, 10, 10); width: 56px;height: 24px; "></span>
+                        <span class="slds-checkbox_off" style="padding-left: 8px;padding-top: 8px;width: 68px; color: rgb(187, 10, 10)">Disabled</span>
+                      </span>
+                    </label>
+                  </div>
+                </template>
+
+
               </div>
               <div class="portfolio-description">
                 <h2>This is an example of portfolio detail</h2>

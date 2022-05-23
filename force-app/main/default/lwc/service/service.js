@@ -59,9 +59,9 @@ export default class Service extends NavigationMixin(LightningElement) {
 }
 
 
-  @wire(GetServiceBySubscription) SubscriptionServices;
+  @wire(GetServiceBySubscription, {ContactId : '$ididid'}) SubscriptionServices;
 //, {ContactId : '$ididid'}
-  @wire(GetSubscriptionDetails) AllSubscriptions;
+  @wire(GetSubscriptionDetails, {ContactId : '$ididid'}) AllSubscriptions;
 //, {ContactId : '$ididid'} 
 @wire(MessageContext)
 messageContext;

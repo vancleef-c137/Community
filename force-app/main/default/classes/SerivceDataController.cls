@@ -18,7 +18,7 @@ public with sharing class SerivceDataController {
         @AuraEnabled(cacheable=true)
         public static List<Product2> GetServiceById(id ProductId)
         {
-            return [SELECT NAME, duration__c,  provider__c, PICTURE_URL__C, Description, family FROM PRODUCT2 WHERE Id = :ProductId];
+            return [SELECT NAME, duration__c,  provider__c, otherImagesLinks__c, PICTURE_URL__C, Description, family FROM PRODUCT2 WHERE Id = :ProductId];
         }
 
   
@@ -33,9 +33,9 @@ public with sharing class SerivceDataController {
         
 
         @AuraEnabled(cacheable=true)
-        public static List<Product2> GetServiceBySubscription()
+        public static List<Product2> GetServiceBySubscription(id ContactId)
         {
-             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = '0038d000006KcwYAAS'];
+             List<ServiceSubscription__c> ProductIds = [SELECT Product2Id__c from ServiceSubscription__c where Contact__c = :ContactId];
             // Set<String> ProdIdSet = new Set<String>();
             //id ContactId
             List<Product2> Products = new List<Product2>();
@@ -49,9 +49,9 @@ public with sharing class SerivceDataController {
         }
 
         @AuraEnabled(cacheable=true)
-        public static List<ServiceSubscription__c> getSubscriptionDetails(){
+        public static List<ServiceSubscription__c> getSubscriptionDetails(id ContactId){
             //id ContactId
-            return [SELECT Product2Id__c, EndDate__c, productName__c, StartDate__c, SDateMonth__c, SDateDay__c from ServiceSubscription__c where Contact__c = '0038d000006KcwYAAS'];
+            return [SELECT Product2Id__c, EndDate__c, productName__c, StartDate__c, SDateMonth__c, SDateDay__c from ServiceSubscription__c where Contact__c = :ContactId];
         }
 
         @AuraEnabled(cacheable=true)
